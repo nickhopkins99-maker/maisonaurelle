@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en" data-theme="cobalt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow" data-indexable-lock>
+  <title>Checkout | Maison Aurelle</title>
+  <meta name="description" content="Place your Maison Aurelle order request. We confirm availability and arrange payment by reply; no card details are ever collected on this site.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:site_name" content="Maison Aurelle">
+  <meta property="og:title" content="Checkout | Maison Aurelle">
+  <meta property="og:description" content="Place your Maison Aurelle order request. We confirm availability and arrange payment by reply; no card details are ever collected on this site.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Maison Aurelle — gold-tone statement jewelry">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/img/og-image.png">
+  <meta name="twitter:title" content="Checkout | Maison Aurelle">
+  <meta name="twitter:description" content="Place your Maison Aurelle order request. We confirm availability and arrange payment by reply; no card details are ever collected on this site.">
+  <meta name="theme-color" content="#F7F4EC">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <!-- Self-hosted fonts (assets/css/fonts.css); the two used above the fold are preloaded. -->
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bodoni-moda-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-description="Place your Maison Aurelle order request. We confirm availability and arrange payment by reply; no card details are ever collected on this site." data-page="checkout">
+  <!-- riso print filters (design lead) -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="riso-duotone" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <!-- luminance -->
+    <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0" result="gray"/>
+    <!-- edge branch: Laplacian on gray and on inverted gray (both edge signs), threshold, dilate -->
+    <feConvolveMatrix in="gray" order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" divisor="1" bias="0" preserveAlpha="true" edgeMode="duplicate" result="e1"/>
+    <feColorMatrix in="gray" type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" result="inv"/>
+    <feConvolveMatrix in="inv" order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" divisor="1" bias="0" preserveAlpha="true" edgeMode="duplicate" result="e2"/>
+    <feComposite in="e1" in2="e2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="edges"/>
+    <feColorMatrix in="edges" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  7 0 0 0 -0.55" result="edgeA"/>
+    <feMorphology in="edgeA" operator="dilate" radius="0.7" result="edgeD"/>
+    <!-- halftone mids branch -->
+    <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.2126 -0.7152 -0.0722 0 1" result="inkmask"/>
+    <feComponentTransfer in="inkmask" result="levels"><feFuncA type="table" tableValues="0 0 0.06 0.3 0.62 0.82 0.93 1 1 1 1"/></feComponentTransfer>
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 3 -0.9" result="dots"/>
+    <feComposite in="levels" in2="dots" operator="arithmetic" k1="0" k2="1" k3="0.6" k4="-0.3" result="screened"/>
+    <feComponentTransfer in="screened" result="thresh"><feFuncA type="table" tableValues="0 0 0.3 1 1"/></feComponentTransfer>
+    <!-- contours + dots -->
+    <feComposite in="edgeD" in2="thresh" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="inkmap"/>
+    <feFlood flood-color="currentColor" result="ink"/>
+    <feComposite in="ink" in2="inkmap" operator="in"/>
+  </filter>
+  <filter id="riso-duotone-cobalt" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <!-- luminance -->
+    <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0" result="gray"/>
+    <!-- edge branch: Laplacian on gray and on inverted gray (both edge signs), threshold, dilate -->
+    <feConvolveMatrix in="gray" order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" divisor="1" bias="0" preserveAlpha="true" edgeMode="duplicate" result="e1"/>
+    <feColorMatrix in="gray" type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" result="inv"/>
+    <feConvolveMatrix in="inv" order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" divisor="1" bias="0" preserveAlpha="true" edgeMode="duplicate" result="e2"/>
+    <feComposite in="e1" in2="e2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="edges"/>
+    <feColorMatrix in="edges" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  7 0 0 0 -0.55" result="edgeA"/>
+    <feMorphology in="edgeA" operator="dilate" radius="0.7" result="edgeD"/>
+    <!-- halftone mids branch -->
+    <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.2126 -0.7152 -0.0722 0 1" result="inkmask"/>
+    <feComponentTransfer in="inkmask" result="levels"><feFuncA type="table" tableValues="0 0 0.06 0.3 0.62 0.82 0.93 1 1 1 1"/></feComponentTransfer>
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 3 -0.9" result="dots"/>
+    <feComposite in="levels" in2="dots" operator="arithmetic" k1="0" k2="1" k3="0.6" k4="-0.3" result="screened"/>
+    <feComponentTransfer in="screened" result="thresh"><feFuncA type="table" tableValues="0 0 0.3 1 1"/></feComponentTransfer>
+    <!-- contours + dots -->
+    <feComposite in="edgeD" in2="thresh" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="inkmap"/>
+    <feFlood flood-color="#2B35A8" result="ink"/>
+    <feComposite in="ink" in2="inkmap" operator="in"/>
+  </filter>
+  <filter id="riso-duotone-ink" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <!-- luminance -->
+    <feColorMatrix type="matrix" values="0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0.2126 0.7152 0.0722 0 0  0 0 0 1 0" result="gray"/>
+    <!-- edge branch: Laplacian on gray and on inverted gray (both edge signs), threshold, dilate -->
+    <feConvolveMatrix in="gray" order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" divisor="1" bias="0" preserveAlpha="true" edgeMode="duplicate" result="e1"/>
+    <feColorMatrix in="gray" type="matrix" values="-1 0 0 0 1  0 -1 0 0 1  0 0 -1 0 1  0 0 0 1 0" result="inv"/>
+    <feConvolveMatrix in="inv" order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" divisor="1" bias="0" preserveAlpha="true" edgeMode="duplicate" result="e2"/>
+    <feComposite in="e1" in2="e2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="edges"/>
+    <feColorMatrix in="edges" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  7 0 0 0 -0.55" result="edgeA"/>
+    <feMorphology in="edgeA" operator="dilate" radius="0.7" result="edgeD"/>
+    <!-- halftone mids branch -->
+    <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.2126 -0.7152 -0.0722 0 1" result="inkmask"/>
+    <feComponentTransfer in="inkmask" result="levels"><feFuncA type="table" tableValues="0 0 0.06 0.3 0.62 0.82 0.93 1 1 1 1"/></feComponentTransfer>
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" stitchTiles="stitch" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 3 -0.9" result="dots"/>
+    <feComposite in="levels" in2="dots" operator="arithmetic" k1="0" k2="1" k3="0.6" k4="-0.3" result="screened"/>
+    <feComponentTransfer in="screened" result="thresh"><feFuncA type="table" tableValues="0 0 0.3 1 1"/></feComponentTransfer>
+    <!-- contours + dots -->
+    <feComposite in="edgeD" in2="thresh" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="inkmap"/>
+    <feFlood flood-color="#17161A" result="ink"/>
+    <feComposite in="ink" in2="inkmap" operator="in"/>
+  </filter>
+  <filter id="riso-grain-ink" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.2126 -0.7152 -0.0722 0 1" result="inkmask"/>
+    <feComponentTransfer in="inkmask" result="levels"><feFuncA type="table" tableValues="0 0 0.08 0.6 1 1"/></feComponentTransfer>
+    <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="9" stitchTiles="stitch" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3 2.2" result="holes"/>
+    <feComposite in="levels" in2="holes" operator="in" result="speckled"/>
+    <feFlood flood-color="currentColor" result="ink"/>
+    <feComposite in="ink" in2="speckled" operator="in"/>
+  </filter>
+  <filter id="riso-rough" x="-2%" y="-5%" width="104%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency=".08" numOctaves="2" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Static so nothing is inserted above the page after first paint (no layout shift); layout.js keeps the text in sync with config.js -->
+  <div class="notice-bar" role="region" aria-label="Store notice"><div class="container">Opening soon — explore the collection; ordering opens shortly.</div></div>
+  <p class="announce" role="region" aria-label="Shipping offer">Complimentary shipping on orders over $250</p>
+  <header id="site-header" class="site-header">
+    <noscript>
+      <div class="noscript-header">
+        <a class="noscript-brand" href="index.html"><img src="assets/img/logo-wordmark.svg" alt="Maison Aurelle" width="302" height="28"></a>
+        <nav aria-label="Primary"><a href="shop.html">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+        <p>Please enable JavaScript to use the shopping bag.</p>
+      </div>
+    </noscript>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="container">
+      <div class="page-head">
+        <p class="eyebrow">Checkout</p>
+        <h1>Place your order request</h1>
+        <p class="lead">Tell us where to send your piece. We confirm availability and arrange payment by reply — no card details are collected here.</p>
+      </div>
+
+      <section id="opening-soon" class="opening-soon" aria-labelledby="opening-soon-title" hidden>
+        <span class="ornament ornament--rosette opening-soon__mark" aria-hidden="true"></span>
+        <h2 id="opening-soon-title" class="opening-soon__title">Ordering opens <span class="script">soon</span></h2>
+        <p class="lead">We are putting the finishing touches on the house. Your bag is saved in this browser, so the pieces you choose will be waiting when ordering opens.</p>
+        <form id="notify-form" class="newsletter__form opening-soon__form" novalidate>
+          <div class="field">
+            <label for="notify-email">Email me when ordering opens <span class="req" aria-hidden="true">*</span></label>
+            <input id="notify-email" name="email" type="email" autocomplete="email" required>
+            <p class="field__error" id="notify-email-error" hidden></p>
+          </div>
+          <button class="btn btn--primary" type="submit">Notify me</button>
+        </form>
+        <p id="notify-status" class="form-status" role="status"></p>
+        <div class="btn-row opening-soon__actions">
+          <a class="btn btn--secondary" href="shop.html">Keep exploring</a>
+          <a class="btn btn--link" href="cart.html">View your bag</a>
+        </div>
+      </section>
+
+      <div id="checkout-empty" class="empty-state" hidden>
+        <p class="empty-state__title">Your bag is empty.</p>
+        <p class="text-muted">Add a piece to your bag before checking out.</p>
+        <a class="btn btn--primary" href="shop.html">Shop the collection</a>
+      </div>
+
+      <div id="checkout-layout" class="checkout-layout" hidden>
+        <div>
+          <details class="checkout-summary-mobile">
+            <summary>Order summary <span>&middot; <span id="summary-total-mobile" class="price"></span></span></summary>
+            <div id="order-summary-mobile"></div>
+          </details>
+
+          <form id="checkout-form" novalidate autocomplete="on">
+            <div id="submit-error" class="alert" role="alert" tabindex="-1" hidden></div>
+
+            <fieldset>
+              <legend><span class="legend-step" aria-hidden="true">1</span>Contact</legend>
+              <div class="field">
+                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint">
+                <p class="field__hint" id="email-hint">We send your order confirmation and payment details here.</p>
+                <p class="field__error" id="email-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone <span class="text-muted">(optional)</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" data-validate="phone">
+                <p class="field__error" id="phone-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="legend-step" aria-hidden="true">2</span>Shipping address</legend>
+              <div class="field-row">
+                <div class="field">
+                  <label for="firstName">First name <span class="req" aria-hidden="true">*</span></label>
+                  <input id="firstName" name="firstName" type="text" autocomplete="given-name" required>
+                  <p class="field__error" id="firstName-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="lastName">Last name <span class="req" aria-hidden="true">*</span></label>
+                  <input id="lastName" name="lastName" type="text" autocomplete="family-name" required>
+                  <p class="field__error" id="lastName-error" hidden></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="address1">Address <span class="req" aria-hidden="true">*</span></label>
+                <input id="address1" name="address1" type="text" autocomplete="address-line1" required>
+                <p class="field__error" id="address1-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="address2">Apartment, suite, etc. <span class="text-muted">(optional)</span></label>
+                <input id="address2" name="address2" type="text" autocomplete="address-line2">
+                <p class="field__error" id="address2-error" hidden></p>
+              </div>
+              <div class="field-row field-row--3">
+                <div class="field">
+                  <label for="city">City <span class="req" aria-hidden="true">*</span></label>
+                  <input id="city" name="city" type="text" autocomplete="address-level2" required>
+                  <p class="field__error" id="city-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="region">State / Province <span class="req" aria-hidden="true">*</span></label>
+                  <input id="region" name="region" type="text" autocomplete="address-level1" required>
+                  <p class="field__error" id="region-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="postal">ZIP / Postal code <span class="req" aria-hidden="true">*</span></label>
+                  <input id="postal" name="postal" type="text" autocomplete="postal-code" required data-validate="postal">
+                  <p class="field__error" id="postal-error" hidden></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="country">Country <span class="req" aria-hidden="true">*</span></label>
+                <select id="country" name="country" autocomplete="country" required></select>
+                <p class="field__error" id="country-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="legend-step" aria-hidden="true">3</span>Order notes</legend>
+              <div class="field">
+                <label for="notes">Notes <span class="text-muted">(optional)</span></label>
+                <textarea id="notes" name="notes" rows="4" maxlength="500" aria-describedby="notes-hint"></textarea>
+                <p class="field__hint" id="notes-hint">Ring size, engraving text, or gift message.</p>
+                <p class="field__error" id="notes-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend><span class="legend-step" aria-hidden="true">4</span>Payment</legend>
+              <div class="payment-copy">
+                <p id="payment-copy"></p>
+              </div>
+              <div class="field field--check">
+                <input id="agree" name="agree" type="checkbox" required data-error-required="Please confirm you’ve reviewed your order and agree to the Shipping &amp; Returns policy.">
+                <label for="agree">I’ve reviewed my order and agree to the <a href="shipping-returns.html" target="_blank" rel="noopener">Shipping &amp; Returns policy<span class="visually-hidden"> (opens in new tab)</span></a>.</label>
+                <p class="field__error" id="agree-error" hidden></p>
+                <p class="field__hint privacy-note">See our <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy<span class="visually-hidden"> (opens in new tab)</span></a> for how we use your details.</p>
+              </div>
+              <button id="place-order" class="btn btn--primary btn--block" type="submit">Place order request</button>
+              <p class="text-muted text-sm mt-3">Prices are confirmed by reply before any payment is taken.</p>
+            </fieldset>
+          </form>
+
+          <!-- Stripe Checkout review (shown instead of the form when config.checkout.apiBase is set and the store is open) -->
+          <section id="pay-review" class="pay-review" aria-labelledby="pay-review-title" hidden>
+            <h2 id="pay-review-title" class="pay-review__title">Review and pay</h2>
+            <p>You’ll enter your email, shipping address and card on our secure payment page (Stripe). We never see or store your card details.</p>
+            <ul class="pay-review__links">
+              <li><a href="shipping-returns.html" target="_blank" rel="noopener">Shipping &amp; Returns<span class="visually-hidden"> (opens in new tab)</span></a></li>
+              <li><a href="privacy.html" target="_blank" rel="noopener">Privacy Policy<span class="visually-hidden"> (opens in new tab)</span></a></li>
+            </ul>
+            <div id="pay-error" class="alert" role="alert" tabindex="-1" hidden></div>
+            <form id="pay-form" novalidate>
+              <div class="field field--check">
+                <input id="pay-agree" name="agree" type="checkbox" required data-error-required="Please confirm you’ve reviewed your order and agree to the Shipping &amp; Returns policy.">
+                <label for="pay-agree">I’ve reviewed my order and agree to the Shipping &amp; Returns policy.</label>
+                <p class="field__error" id="pay-agree-error" hidden></p>
+              </div>
+              <button id="pay-button" class="btn btn--primary btn--block" type="submit">Continue to secure payment</button>
+              <p class="text-muted text-sm pay-review__note">Totals here are a preview; the final amount is shown on the payment page.</p>
+            </form>
+          </section>
+        </div>
+
+        <div class="checkout-summary-desktop">
+          <aside id="order-summary" class="order-summary" aria-label="Order summary"></aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/collections.js"></script>
+  <script defer src="assets/js/products.js"></script>
+  <script defer src="assets/js/utils.js"></script>
+  <script defer src="assets/js/catalog.js"></script>
+  <script defer src="assets/js/cart.js"></script>
+  <script defer src="assets/js/forms.js"></script>
+  <script defer src="assets/js/layout.js"></script>
+  <script defer src="assets/js/analytics.js"></script>
+  <script defer src="assets/js/pages/checkout.js"></script>
+</body>
+</html>

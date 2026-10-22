@@ -1,0 +1,4 @@
+# Maison Aurelle — pre-launch: keep all crawlers out.
+# Run tools/set_indexable.py true on launch day to restore the real rules.
+User-agent: *
+Disallow: /

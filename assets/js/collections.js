@@ -50,7 +50,7 @@ MA.COLLECTIONS = [
     lineupTitle: "The Garden Lineup", legacy: "flower-sets", banner: null,
     story: [
       "On an island where the frangipani bloom all year, a grandmother pressed one flower into every letter she sent her granddaughter overseas. When the granddaughter finally came home, the garden was gone, so she had the flowers cast in gold to keep them forever.",
-      "Letters from the Frangipani Garden is soft, sunlit and sentimental. A flower pendant and matching studs make a gift that feels personal at a gentle price."
+      "Letters from the Frangipani Garden is soft, sunlit and sentimental. A flower pendant and matching studs make a gift that feels personal."
     ]
   },
   {
@@ -58,7 +58,7 @@ MA.COLLECTIONS = [
     lineupTitle: "The Cabinet Lineup", legacy: "rings", banner: null,
     story: [
       "A traveler who never stayed anywhere long kept one small wooden cabinet. In each drawer was a ring set with a stone from a place she had loved: tiger eye from the desert, malachite from the mountains, garnet from a market at dusk. She wore a different one each day, depending on where her mind wanted to go.",
-      "The Wanderer's Cabinet mixes earthy stones with bold signets and sculpted gold bands. Rings stack across the hand, so customers buy them in threes."
+      "The Wanderer's Cabinet mixes earthy stones with bold signets and sculpted gold bands. Rings stack across the hand — wear one, or three."
     ]
   }
 ];

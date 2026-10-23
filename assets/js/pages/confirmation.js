@@ -180,6 +180,9 @@
     if (!/^cs_(test|live)_[A-Za-z0-9]+$/.test(id) || !MA.store.checkoutApi) { root.removeAttribute('aria-busy'); renderSessionGeneric(); return; }
     var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
     var t = ctrl ? setTimeout(function () { ctrl.abort(); }, 15000) : null;
+    // An unknown/expired session answers 404, which the page handles quietly (generic thank-you). Chromium still prints
+    // "Failed to load resource: 404" for any 4xx fetch regardless of JS handling; that one log line is unavoidable and
+    // the test suite tolerates exactly the /session?id= pattern (b1-merged-tests/run.js).
     fetch(MA.store.checkoutApi + '/session?id=' + encodeURIComponent(id), { cache: 'no-store', credentials: 'omit', signal: ctrl ? ctrl.signal : undefined })
       .then(function (res) { clearTimeout(t); return res.ok ? res.json() : null; }, function () { clearTimeout(t); return null; })
       .then(function (s) {

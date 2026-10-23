@@ -71,11 +71,18 @@
   }
 
   /* ---- Notice bar --------------------------------------------------------- */
+  /* Open-store notice: cfg.noticeOpen with {freeThreshold} and {returnsDays} filled from config (no hard-coded amounts). */
+  function noticeOpenText() {
+    var ship = cfg.shipping || {};
+    return String(cfg.noticeOpen || '')
+      .replace(/\{freeThreshold\}/g, U.formatMoney(U.toCents(Number(ship.freeThreshold) || 0)))
+      .replace(/\{returnsDays\}/g, String(cfg.returnsDays || ''));
+  }
   function renderNotice() {
     var header = U.qs('#site-header');
     if (!header) return;
     var existing = U.qs('.notice-bar');
-    var noticeText = MA.store.open ? cfg.notice : (cfg.closedNotice || cfg.notice);
+    var noticeText = MA.store.open ? noticeOpenText() : (cfg.closedNotice || '');
     if (!noticeText) { if (existing) existing.remove(); document.documentElement.classList.remove('has-notice'); return; }
     if (existing) {                                   // static bar in the HTML: just keep its text in sync
       var box = U.qs('.container', existing) || existing;
@@ -541,7 +548,8 @@
     return extra ? f + ' with ' + extra : f;
   }
   /* Lookbook names already state the finish ("Wave Cuff in 18K Gold-Plated Stainless Steel"): use them as they are. */
-  function altFor(product) { return C.nameParts(product).finish ? product.name : product.name + ' in ' + finishOf(product); }
+  // `alt` on a product overrides the generated text (crawler photos that show more than the one piece).
+  function altFor(product) { return product.alt || (C.nameParts(product).finish ? product.name : product.name + ' in ' + finishOf(product)); }
 
   function productImage(product, attrs, size) {
     if (!product.hasImage) return imageFallback(product, size);

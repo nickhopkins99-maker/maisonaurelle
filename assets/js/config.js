@@ -16,7 +16,7 @@ MA.config = {
   social: { instagram: "", pinterest: "", facebook: "" },
   locale: "en-US", currency: "USD", orderPrefix: "MA",
   // OWNER: legal details for privacy.html. Empty values show as [BRACKETED] placeholders on the page.
-  legal: { businessName: "", address: "", privacyEmail: "", markets: "", paymentProcessor: "", fulfilmentPartners: "",
+  legal: { businessName: "", address: "", privacyEmail: "", markets: "", paymentProcessor: "Stripe", fulfilmentPartners: "",
            retentionOrders: "", retentionMessages: "", retentionAnalytics: "", effectiveDate: "" },
   privacyDraft: true,
   // OWNER: analytics stays completely off (no network calls) until ga4Id is set, e.g. "G-XXXXXXXXXX". See STOREFRONT.md.
@@ -38,7 +38,8 @@ MA.config = {
   indexable: false,
   storeOpen: false,
   closedNotice: "Opening soon — explore the collection; ordering opens shortly.",
-  notice: "Preview store — orders are placed as requests; we confirm availability and arrange payment before anything ships.",
+  // Notice bar while open. {freeThreshold} and {returnsDays} are filled from the values above (no hard-coded amounts).
+  noticeOpen: "Complimentary shipping on orders over {freeThreshold} · {returnsDays}-day returns",
   maxQtyPerItem: 10, openDrawerOnAdd: true,
   // OWNER: retail price = wholesale cost × multiplier, rounded to the nearest roundTo dollars (the lookbook rule: $5).
   // Lineup pieces carry the lookbook's explicit retail `price` and ignore this (see STOREFRONT.md "Pricing").

@@ -33,7 +33,8 @@
     summary.appendChild(MA.store.open ? el('a', { class: 'btn btn--primary btn--block', href: 'checkout.html', text: 'Proceed to checkout' })
       : el('a', { class: 'btn btn--primary btn--block', href: 'checkout.html#opening-soon', text: 'Ordering opens soon' }));
     summary.appendChild(el('a', { class: 'btn btn--secondary btn--block', href: 'shop.html', text: 'Continue shopping' }));
-    summary.appendChild(el('p', { class: 'text-muted text-sm', text: MA.store.stripeCheckout ? 'These totals are a preview; the final amount is shown on the secure payment page.' : 'Orders are placed as requests; prices are confirmed by reply before any payment is taken.' }));
+    // the payment footnote describes a flow that only exists while the store is open
+    if (MA.store.open) summary.appendChild(el('p', { class: 'text-muted text-sm', text: MA.store.stripeCheckout ? 'These totals are a preview; the final amount is shown on the secure payment page.' : 'Orders are placed as requests; prices are confirmed by reply before any payment is taken.' }));
   }
 
   MA.page = {

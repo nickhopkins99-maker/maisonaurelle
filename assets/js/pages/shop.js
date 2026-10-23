@@ -33,6 +33,28 @@
   }
 
   /* ---- Collection view -------------------------------------------------------------------------------- */
+  /* Typographic banner: the name must fit its overflow-hidden frame at every width. Start from the CSS size and step the
+     script down (never below 1.5rem) while the frame still clips; re-fit on resize and once the script font has loaded. */
+  function fitBannerScript(box) {
+    var span = U.qs('.coll-hero__script', box);
+    if (!span) return;
+    var fitting = false;
+    function fit() {
+      if (fitting) return;
+      fitting = true;
+      span.style.fontSize = '';
+      var size = parseFloat(getComputedStyle(span).fontSize), min = 24, guard = 40;
+      while (guard-- && size > min && (box.scrollHeight > box.clientHeight + 1 || box.scrollWidth > box.clientWidth + 1 || span.scrollWidth > span.clientWidth + 1)) {
+        size = Math.max(min, Math.floor(size * 0.94));
+        span.style.fontSize = size + 'px';
+      }
+      fitting = false;
+    }
+    fit();
+    var t;
+    window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fit, 120); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  }
   function typesIn(list) {
     return C.types().filter(function (t) { return list.some(function (p) { return p.type === t.slug; }); });
   }
@@ -63,6 +85,7 @@
       media));
     hero.hidden = false;
     U.qs('#shop-head').hidden = true;
+    if (!banner) fitBannerScript(media);
 
     var story = U.qs('#collection-story');
     story.textContent = '';

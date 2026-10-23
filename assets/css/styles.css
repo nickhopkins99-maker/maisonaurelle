@@ -421,6 +421,7 @@ html.drawer-open, html.drawer-open body { overflow: hidden; }
 .pdp__buy { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-2); }
 .pdp__buy .btn { flex: 1 1 200px; }
 .pdp__shipnote { font-size: var(--fs-small); }
+.pdp__price-note { font-size: var(--fs-small); margin-top: calc(-1 * var(--space-2)); }
 .pdp__details { margin-top: var(--space-4); border-top: 1px solid var(--color-border); padding-top: var(--space-4); }
 .pdp__h2 { font-size: var(--fs-h4); margin-bottom: var(--space-3); }
 .details-list { list-style: none; padding: 0; display: grid; }
@@ -602,6 +603,9 @@ img.is-loading { opacity: 0; }
 .page-head--center { justify-items: center; text-align: center; padding-block: var(--space-7) var(--space-6); }
 .page-head--center .lead { margin-inline: auto; }
 .page-head--center h1 { margin-top: var(--space-4); }
+/* "All jewelry": the script word sits on its own line, lowered 0.1em, exactly like the home "The Gilded Hour" lockup, so its
+   opening swash no longer runs into "All". */
+#shop-title .script { display: block; vertical-align: -0.1em; margin-top: -0.12em; margin-bottom: 0.1em; }
 
 /* ---- Nav: Collections disclosure menu ----------------------------------------------------------------- */
 .nav__menu-btn { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); width: 100%; min-height: 44px; padding: var(--space-3) 0; font-family: var(--font-caps); font-weight: var(--fw-medium); font-size: var(--fs-caps); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--color-ink); border-bottom: 1px solid var(--color-border); text-align: left; }
@@ -712,7 +716,9 @@ img.is-loading { opacity: 0; }
 .coll-hero__media img { width: 100%; height: 100%; object-fit: contain; padding: 6%; }
 .coll-hero__media--type { flex-direction: column; gap: var(--space-5); background: var(--color-surface); padding: var(--space-6); text-align: center; }
 .coll-hero__mark { width: calc(var(--tile-size) * 1.1); }
-.coll-hero__script { font-size: clamp(2.75rem, 1.8rem + 3.4vw, 4.75rem); line-height: 1.05; max-width: 11ch; }
+.coll-hero__script { font-size: clamp(2.75rem, 1.8rem + 3.4vw, 4.75rem); line-height: 1.05; max-width: 100%; }
+/* Long names ("Letters from the Frangipani Garden") must stay inside the frame at every width: shop.js fitBannerScript()
+   measures the typographic banner after render and steps the script size down until nothing is clipped. */
 @media (min-width: 900px) {
   .coll-hero__grid { grid-template-columns: 5fr 7fr; gap: var(--space-8); }
   .coll-hero__text { justify-items: start; text-align: left; }
@@ -728,6 +734,7 @@ img.is-loading { opacity: 0; }
 .toolbar__label { font-family: var(--font-caps); font-size: var(--fs-xs); letter-spacing: var(--ls-caps); text-transform: uppercase; color: var(--color-ink-muted); }
 .chip-group--links { list-style: none; margin: 0; }
 .chip-group--links li { flex: 0 0 auto; display: flex; }
+@media (min-width: 1024px) { .toolbar .chip-group { flex-wrap: wrap; overflow-x: visible; scroll-snap-type: none; } }
 a.chip { display: inline-flex; align-items: center; text-decoration: none; }
 a.chip[aria-current="page"] { background: var(--color-cobalt-700); color: var(--color-ink-inv); border-color: var(--color-cobalt-700); }
 .toolbar__row { align-items: end; }

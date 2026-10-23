@@ -130,9 +130,11 @@
       h1,
       parts.finish ? null : el('p', { class: 'pdp__metal text-muted', text: product.metal }),
       el('div', { class: 'pdp__price-row' }, L.priceBlock(product, true), L.badge(product)),
+      product.priceEstimated ? el('p', { class: 'pdp__price-note text-muted', text: 'Price to be confirmed' }) : null,
       el('p', { class: 'pdp__desc', text: product.description }),
       buyBox(product),
       el('p', { class: 'pdp__shipnote text-muted' },
+        (cfg.shipping.leadTime ? 'Ships in ' + cfg.shipping.leadTime + ' · ' : '') +
         'Complimentary shipping over ' + U.formatMoney(U.toCents(cfg.shipping.freeThreshold)) + ' · ',
         el('a', { href: 'shipping-returns.html#returns', text: '30-day returns' })),
       el('section', { class: 'pdp__details', 'aria-labelledby': 'details-title' },

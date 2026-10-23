@@ -302,6 +302,7 @@
     });
     U.qsa('[data-free-threshold]').forEach(function (n) { n.textContent = U.formatMoney(U.toCents(cfg.shipping.freeThreshold)); });
     U.qsa('[data-flat-rate]').forEach(function (n) { n.textContent = U.formatMoney(U.toCents(cfg.shipping.flatRate)); });
+    U.qsa('[data-lead-time]').forEach(function (n) { n.textContent = cfg.shipping.leadTime || ''; });
     var legal = cfg.legal || {};
     U.qsa('[data-legal]').forEach(function (n) { var v = legal[n.dataset.legal]; if (v) { n.textContent = v; n.classList.add('is-set'); } });
     if (cfg.privacyDraft === false) U.qsa('[data-privacy-draft]').forEach(function (n) { n.remove(); });
@@ -499,12 +500,13 @@
 
   /* ---- Newsletter-style sign-up (home newsletter, "Notify me" on the closed checkout) ------------------
      Uses newsletter.formEndpoint when set; otherwise a pre-filled email to the store, but only when the store email is
-     real. When neither is possible the form is replaced by a "Sign-ups open soon" note. */
-  function initSignupForm(form, status, subject, okMessage) {
+     real. When neither is possible the form is replaced by a "Sign-ups open soon" note, or removed outright
+     (opts.removeWhenClosed: the closed checkout panel, whose own copy already says ordering opens soon). */
+  function initSignupForm(form, status, subject, okMessage, opts) {
     if (!form) return;
     if (!MA.store.canSignup) {
-      var note = el('p', { class: 'signup-closed', text: 'Sign-ups open soon \u2014 check back shortly.' });
-      form.replaceWith(note);
+      if (opts && opts.removeWhenClosed) form.remove();
+      else form.replaceWith(el('p', { class: 'signup-closed', text: 'Sign-ups open soon \u2014 check back shortly.' }));
       if (status) status.textContent = '';
       return;
     }
@@ -579,7 +581,8 @@
   /* Luxury-format card: white image well, then centred collection eyebrow, piece name, finish and price.
      No add-to-bag on cards; the product page and the look module have it. */
   function productName(product, cls) {
-    var parts = C.nameParts(product);
+    // cards print shortName (generator SHORT_NAME table) when a long name would clamp; the product page keeps `name`
+    var parts = C.nameParts(product.shortName ? { name: product.shortName } : product);
     var frag = document.createDocumentFragment();
     frag.appendChild(el('span', { class: cls + '__title', text: parts.title }));
     if (parts.finish) { frag.appendChild(document.createTextNode(' ')); frag.appendChild(el('span', { class: cls + '__finish', text: parts.finish })); }

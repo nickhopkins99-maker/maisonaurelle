@@ -306,7 +306,7 @@
         U.qs('#checkout-layout').hidden = true; U.qs('#checkout-empty').hidden = true;
         var h1 = U.qs('.page-head h1'); if (h1) h1.textContent = 'Checkout';
         var lead = U.qs('.page-head .lead'); if (lead) lead.textContent = 'Browse freely and fill your bag \u2014 ordering opens shortly.';
-        L.initSignupForm(U.qs('#notify-form'), U.qs('#notify-status'), 'Notify me when ordering opens', 'Thank you \u2014 we\u2019ll email you when ordering opens.');
+        L.initSignupForm(U.qs('#notify-form'), U.qs('#notify-status'), 'Notify me when ordering opens', 'Thank you \u2014 we\u2019ll email you when ordering opens.', { removeWhenClosed: true });
         return;
       }
       if (MA.store.stripeCheckout) initStripeCheckout(); else renderCountries();

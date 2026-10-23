@@ -22,7 +22,9 @@ MA.config = {
   // OWNER: analytics stays completely off (no network calls) until ga4Id is set, e.g. "G-XXXXXXXXXX". See STOREFRONT.md.
   analytics: { ga4Id: "", consentRequired: true, excludeInternal: true },           // true = "DRAFT" banner + noindex on privacy.html. Set false only after legal review.
   returnsDays: 30,              // OWNER: return window in days (hero trust line, policy)
-  shipping: { freeThreshold: 250, flatRate: 15, countries: [ {code:"US",name:"United States"}, {code:"CA",name:"Canada"} ] },
+  // OWNER: leadTime is printed on Shipping & Returns, every product page and the checkout review page. It must match the
+  // order desk's Settings "Processing time" (backend/SETUP.md), which the order confirmation email prints word for word.
+  shipping: { freeThreshold: 250, flatRate: 15, leadTime: "7–14 business days", countries: [ {code:"US",name:"United States"}, {code:"CA",name:"Canada"} ] },
   tax: { rate: 0.07, label: "Estimated tax" }, // rate 0 => "Calculated on confirmation"
   checkout: {
     formEndpoint: "", allowStripeLinks: true,   // formEndpoint: e.g. a Formspree form URL
@@ -37,7 +39,7 @@ MA.config = {
   // OWNER: search engines. Flip with tools/set_indexable.py (it also edits every page head and robots.txt).
   indexable: false,
   storeOpen: false,
-  closedNotice: "Opening soon — explore the collection; ordering opens shortly.",
+  closedNotice: "Opening soon — ordering opens shortly.",
   // Notice bar while open. {freeThreshold} and {returnsDays} are filled from the values above (no hard-coded amounts).
   noticeOpen: "Complimentary shipping on orders over {freeThreshold} · {returnsDays}-day returns",
   maxQtyPerItem: 10, openDrawerOnAdd: true,
